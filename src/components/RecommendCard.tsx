@@ -4,13 +4,18 @@ import { RecommendType } from "../types";
 
 type Props = {
   recommendItem: RecommendType;
+  index: number;
 };
 
-const RecommendCard = ({ recommendItem }: Props) => {
+const RecommendCard = ({ recommendItem, index }: Props) => {
   const { name, price, image, ratio, inHour } = recommendItem;
+
+  const bacgroundColors: string[] = ["#E1DFA4", "#E3ECF1", "#F4E3E5"];
   return (
-    <div>
-      <div>
+    <div
+      style={{ ...styles.recommendCard, background: bacgroundColors[index] }}
+    >
+      <div className="d-flex  align-items-center">
         <img src={Icons.recycleIcon} alt="recycle" />
         <span>{ratio}% Recommend </span>
       </div>
@@ -27,6 +32,10 @@ const RecommendCard = ({ recommendItem }: Props) => {
       </div>
     </div>
   );
+};
+
+const styles = {
+  recommendCard: { width: "310px", padding: "15px 27px", borderRadius: "14px" },
 };
 
 export default RecommendCard;

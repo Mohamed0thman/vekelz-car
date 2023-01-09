@@ -11,9 +11,12 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.33",
     "@amcharts/amcharts5": "^5.2.47",
+    "@faker-js/faker": "^7.6.0",
     "bootstrap": "^5.2.3",
+    "chart.js": "^4.1.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
+    "react-chartjs-2": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1"
   },

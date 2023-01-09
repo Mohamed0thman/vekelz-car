@@ -14,7 +14,7 @@ const links: LinkType[] = [
 ];
 
 const pieData: PieType[] = [
-  { icon: Icon.fillThunderIcon, ratio: 45, title: "" },
+  { icon: Icon.fillThunderIcon, ratio: 45, title: "Energy" },
   { icon: Icon.rangeIcon, ratio: 157, title: "Range" },
   { icon: Icon.breakFluidIcon, ratio: 9, title: "Breal fluid" },
   { icon: Icon.wheelIcon, ratio: 25, title: "Tire Wear" },

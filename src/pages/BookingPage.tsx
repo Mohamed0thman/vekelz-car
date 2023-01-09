@@ -5,9 +5,9 @@ import BookingCard from "../components/BookingCard";
 
 const BookingPage = () => {
   return (
-    <div style={{ background: "#F5F5F5", minHeight: "100vh" }}>
+    <div style={{ background: "#F5F5F5", minHeight: "100vh", padding: "30px" }}>
       <Container>
-        <h1>BookingPage</h1>
+        <h1>Booking</h1>
 
         <div>
           <div></div>
@@ -15,7 +15,7 @@ const BookingPage = () => {
           <div></div>
         </div>
 
-        <Row>
+        <Row style={{ marginTop: "30px" }}>
           {Data.carData.map((item, i) => (
             <Col xs={4} key={i}>
               <BookingCard carItem={item} />

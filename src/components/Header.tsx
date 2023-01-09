@@ -1,18 +1,14 @@
-import React from "react";
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { Images, Icons } from "../assets";
 import CustomSearch from "./CustomSearch";
 
 const Header = () => {
   return (
-    <Navbar sticky="top" expand="lg" style={{ background: "#ffffff" }}>
+    <Navbar
+      sticky="top"
+      expand="lg"
+      style={{ background: "#ffffff", borderLeft: "1px solid #F5F5F5" }}
+    >
       <Container fluid>
         <Navbar className="w-100 d-flex justify-content-between">
           <Nav>
