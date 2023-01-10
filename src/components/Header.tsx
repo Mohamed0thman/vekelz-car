@@ -1,60 +1,59 @@
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { useContext, useState } from "react";
+import { Navbar, Container, Nav, Form } from "react-bootstrap";
+import { CustomSwitch, CustomSearch, HeaderDropdown } from ".";
 import { Images, Icons } from "../assets";
-import CustomSearch from "./CustomSearch";
+import { AppContext } from "../context/AppContext";
 
 const Header = () => {
+  const { darkTheme, toggleTheme } = useContext(AppContext);
+
   return (
     <Navbar
       sticky="top"
       expand="lg"
-      style={{ background: "#ffffff", borderLeft: "1px solid #F5F5F5" }}
+      className={`$${darkTheme ? "dark" : ""}`}
+      style={{
+        background: darkTheme ? "#242731" : "#ffffff",
+        borderLeft: darkTheme ? " 1px solid #1F2128" : "1px solid #F5F5F5",
+      }}
     >
       <Container fluid>
-        <Navbar className="w-100 d-flex justify-content-between">
-          <Nav>
+        <Navbar.Collapse
+          className="d-flex  align-items-center justify-content-between "
+          style={{ padding: "0 30px" }}
+        >
+          <Form className="d-flex">
             <CustomSearch />
-          </Nav>
-          <Nav className=" d-flex align-items-center " navbarScroll>
-            <NavDropdown
-              style={{ marginRight: "40px" }}
-              title={
-                <div className="pull-left">
-                  <img
-                    className="thumbnail-image"
-                    src={Icons.notificationIcon}
-                    alt="notificationIcon"
-                  />
-                </div>
+          </Form>
+          <Nav className=" d-flex flex-row align-items-center">
+            <CustomSwitch handleOnSwitch={() => toggleTheme()} />
+            <HeaderDropdown
+              styleContainer={{ marginRight: "40px" }}
+              icon={
+                <img
+                  className="thumbnail-image"
+                  src={Icons.notificationIcon}
+                  alt="notificationIcon"
+                />
               }
-            >
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title={
-                <div>
-                  <img
-                    style={{
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "50%",
-                    }}
-                    src={Images.userImage}
-                    alt="user"
-                  />
-                </div>
+              items={["Action", "   Another action"]}
+            />
+            <HeaderDropdown
+              icon={
+                <img
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "50%",
+                  }}
+                  src={Images.userImage}
+                  alt="user"
+                />
               }
-              id="navbarScrollingDropdown"
-            >
-              <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Settings</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">LogOut</NavDropdown.Item>
-            </NavDropdown>
+              items={["Profile", "Settings", "LogOut"]}
+            />
           </Nav>
-        </Navbar>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

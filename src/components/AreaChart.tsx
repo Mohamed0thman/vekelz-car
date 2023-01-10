@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
+import { DateButtons } from ".";
 
 ChartJS.register(
   CategoryScale,
@@ -78,9 +79,14 @@ export const data = {
   ],
 };
 
-const AreaChart = () => {
+type Props = {
+  hovered: boolean;
+};
+
+const AreaChart = ({ hovered }: Props) => {
   return (
     <div>
+      {/* <DateButtons /> */}
       <Line options={options} data={data} />
     </div>
   );

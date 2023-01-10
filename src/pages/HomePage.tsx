@@ -7,11 +7,11 @@ import RecommendCard from "../components/RecommendCard";
 
 const HomePage = () => {
   return (
-    <div className="main">
+    <>
       <Container>
         <Row>
           {Data.pieData.map((item, i) => (
-            <Col sm="6" md="3" key={i}>
+            <Col xs="6" md="3" key={i}>
               <PieCard pieItem={item} index={i} />
             </Col>
           ))}
@@ -19,10 +19,10 @@ const HomePage = () => {
 
         <Row style={{ marginTop: "32px" }}>
           <Col lg="6">
-            <ChartContainer Chart={<VerticalvarChart />} />
+            <ChartContainer title="Miles Statistics" />
           </Col>
           <Col lg="6">
-            <ChartContainer Chart={<AreaChart />} />
+            <ChartContainer title="Car Statistics" isAreaChart={true} />
           </Col>
         </Row>
         <Row style={{ marginTop: "32px" }}>
@@ -33,7 +33,7 @@ const HomePage = () => {
           ))}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

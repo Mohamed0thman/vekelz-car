@@ -17,7 +17,7 @@ const CustomSearch = () => {
       <Form.Control
         type="search"
         placeholder="Search or type"
-        className="me-2"
+        className="me-2 shadow-none"
         aria-label="Search"
         style={styles.searchInput}
       />
@@ -29,7 +29,7 @@ const styles = {
   searchGroup: {
     background: "#F5F4F6",
     padding: "12px",
-    width: "300px",
+    maxWidth: "300px",
     borderRadius: "8px",
   },
   searchLine: {
@@ -40,7 +40,7 @@ const styles = {
   },
   searchInput: {
     border: "none",
-    fontSize: "16px",
+    fontSize: "1.6rem",
     padding: "0px",
     paddingLeft: "15px",
     background: "#F5F4F6",

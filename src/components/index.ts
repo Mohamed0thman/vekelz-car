@@ -7,6 +7,9 @@ import AreaChart from "./AreaChart";
 import VerticalvarChart from "./VerticalvarChart";
 import Spinners from "./Spinners";
 import Layout from "./Layout";
+import HeaderDropdown from "./HeaderDropdown";
+import CustomSwitch from "./CustomSwitch";
+import DateButtons from "./DateButtons";
 
 export {
   Header,
@@ -18,4 +21,7 @@ export {
   AreaChart,
   Spinners,
   Layout,
+  HeaderDropdown,
+  CustomSwitch,
+  DateButtons,
 };

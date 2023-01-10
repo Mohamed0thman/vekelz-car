@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { AreaChart, VerticalvarChart } from ".";
 
 type Props = {
-  Chart: JSX.Element;
+  title: string;
+  isAreaChart?: boolean;
 };
 
-const ChartContainer = ({ Chart }: Props) => {
+const ChartContainer = ({ isAreaChart, title }: Props) => {
+  const [hovered, setHovered] = useState<boolean>(false);
   return (
-    <div style={styles.milesChart}>
-      <h4 style={{ fontWeight: "bold" }}>Miles Statistics</h4>
-      <div className="d-flex align-items-center justify-content-between">
-        <ul className="d-flex align-items-center ">
-          <li style={styles.dateList}>Day</li>
-          <li style={styles.dateList}>Week</li>
-          <li style={styles.dateList}>Month</li>
-        </ul>
-        <span>256 Miles</span>
-      </div>
-      {Chart}
+    <div
+      style={styles.milesChart}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <h4 style={{ fontWeight: "bold" }}>{title}</h4>
+
+      {isAreaChart ? (
+        <AreaChart hovered={hovered} />
+      ) : (
+        <VerticalvarChart hovered={hovered} />
+      )}
     </div>
   );
 };
@@ -43,3 +47,12 @@ const styles = {
   },
 };
 export default ChartContainer;
+
+// <div className="d-flex align-items-center justify-content-between">
+// <ul className="d-flex align-items-center ">
+//   <li style={styles.dateList}>Day</li>
+//   <li style={styles.dateList}>Week</li>
+//   <li style={styles.dateList}>Month</li>
+// </ul>
+// <span>256 Miles</span>
+// </div>

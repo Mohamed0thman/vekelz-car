@@ -5,7 +5,7 @@ import BookingCard from "../components/BookingCard";
 
 const BookingPage = () => {
   return (
-    <div className="main">
+    <>
       <Container>
         <h1>Booking</h1>
 
@@ -23,7 +23,7 @@ const BookingPage = () => {
           ))}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

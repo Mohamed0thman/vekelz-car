@@ -4,15 +4,19 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-type Props = { pieColor: string };
+type Props = { pieColor: string; hoverd: boolean };
 
-const PieChart = ({ pieColor }: Props) => {
+const PieChart = ({ pieColor, hoverd }: Props) => {
   const data = {
     datasets: [
       {
         label: "Poll",
         data: [30, 30, 70],
-        backgroundColor: ["transparent", pieColor, "transparent"],
+        backgroundColor: [
+          "transparent",
+          hoverd ? "#fff" : pieColor,
+          "transparent",
+        ],
         borderColor: ["transparent "],
         rotation: 140,
         borderRadius: 6,
@@ -49,7 +53,10 @@ const PieChart = ({ pieColor }: Props) => {
               {
                 label: "Poll",
                 data: [30, 70],
-                backgroundColor: ["transparent", "#F4F5F9"],
+                backgroundColor: [
+                  "transparent",
+                  hoverd ? "#B37EFC" : "#F4F5F9",
+                ],
                 borderColor: ["transparent "],
                 rotation: 140,
                 borderRadius: [0, 6],

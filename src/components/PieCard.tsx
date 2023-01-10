@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PieType } from "../types";
 import PieChart from "./PieChart";
 
@@ -8,6 +8,7 @@ type Props = {
 };
 
 const PieCard = ({ pieItem, index }: Props) => {
+  const [hoverd, setHoverd] = useState<boolean>(false);
   const { title, icon, ratio } = pieItem;
 
   const iconColors: string[] = [
@@ -19,8 +20,9 @@ const PieCard = ({ pieItem, index }: Props) => {
   const pieColors: string[] = ["#70CF97", "#FF7E86", "#A162F7", "#F6CC0D"];
   return (
     <div
-      style={styles.pieCard}
       className="pie-card d-flex flex-column justify-content-around align-items-center"
+      onMouseEnter={() => setHoverd(true)}
+      onMouseLeave={() => setHoverd(false)}
     >
       <div
         className="d-flex flex-column align-items-center"
@@ -31,18 +33,18 @@ const PieCard = ({ pieItem, index }: Props) => {
             width: "38px",
             height: "38px",
             borderRadius: "50%",
-            background: iconColors[index],
+            background: hoverd ? "rgba(255, 255, 255, 0.2)" : iconColors[index],
           }}
           className="d-flex justify-content-center align-items-center"
         >
           <img style={{ color: pieColors[index] }} src={icon} alt="" />
         </div>
-        <h4>{title}</h4>
+        <h2 style={{ marginTop: "10px" }}>{title}</h2>
       </div>
 
       <div style={{ position: "relative" }}>
-        <PieChart pieColor={pieColors[index]} />
-        <h4
+        <PieChart hoverd={hoverd} pieColor={pieColors[index]} />
+        <h2
           style={{
             position: "absolute",
             top: "50%",
@@ -51,19 +53,10 @@ const PieCard = ({ pieItem, index }: Props) => {
           }}
         >
           {ratio}%
-        </h4>
+        </h2>
       </div>
     </div>
   );
-};
-
-const styles = {
-  pieCard: {
-    maxWidth: "232px",
-    height: "266px",
-    backgroundColor: "white",
-    borderRadius: 14,
-  },
 };
 
 export default PieCard;

@@ -5,11 +5,14 @@ import App from "./App";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import { AppProvider } from "./context/AppContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AppProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppProvider>
   </React.StrictMode>
 );

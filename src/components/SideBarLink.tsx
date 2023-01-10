@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LinkType } from "../types";
 type Props = {
   link: LinkType;
@@ -8,11 +8,16 @@ type Props = {
 const SideBarLink = ({ link }: Props) => {
   const { icon, title, path } = link;
   return (
-    <li style={{ marginTop: "20px" }}>
-      <Link to={path}>
+    <li className="sidebar-navitem">
+      <NavLink
+        to={path}
+        className={({ isActive }) =>
+          `sidebar-navlink ${isActive ? "sidebar-navlink-active" : ""}`
+        }
+      >
         <img src={icon} alt={title} />
         <span style={{ marginLeft: "10px" }}>{title}</span>
-      </Link>
+      </NavLink>
     </li>
   );
 };

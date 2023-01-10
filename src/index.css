@@ -5,13 +5,25 @@ html {
 body {
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
-  background: #f5f5f5 !important;
   min-height: "100vh";
+  font-size: 2rem;
+  font-weight: 400;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 a {
@@ -30,23 +42,101 @@ a {
   height: 78px;
   padding: 0;
 }
+
+/* side bar */
+.sidebar-navitem {
+  margin-top: 10px;
+}
+.sidebar-navlink {
+  width: 150px;
+  height: 35px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5f6165;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+}
+.sidebar-navlink:hover {
+  background-color: #f3f5f8;
+  color: #5f6165;
+}
+.sidebar-navlink-active {
+  background-color: #f3f5f8;
+}
 .main {
   padding: 30px;
+  background: #f5f5f5 !important;
 }
+/* components */
 
+/* pie card */
 .pie-card {
+  max-width: 232px;
+  height: 266px;
+  background-color: #fff;
+  border-radius: 14px;
 }
 
+.pie-card:hover {
+  background-color: #a66ff0 !important;
+  color: #fff;
+}
+
+/* /////////////////////// */
+
+/* media quary */
 @media only screen and (max-width: 992px) {
 }
 
 @media only screen and (max-width: 768px) {
+  .pie-card {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
+  .home-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 480px) {
 }
 
 @media only screen and (max-width: 365px) {
+}
+
+/* /////////////////////////////////////////////////// */
+/* dark mode theme */
+/* /////////////////////////////////////////////////////// */
+.dark {
+  background: #1f2128 !important;
+}
+
+/* dark side bar */
+.sidebar.dark {
+  background: #242731 !important;
+}
+.dark .sidebar-title {
+  color: #fff;
+}
+.dark .sidebar-navlink {
+  color: #808191;
+}
+.dark .sidebar-navlink-active {
+  color: #ffffff;
+  background-color: #292e3d;
+}
+.dark .sidebar-navlink:hover {
+  color: #ffffff;
+  background-color: #292e3d;
+}
+/* // home page dark theme */
+.dark .pie-card {
+  background-color: #242731;
+  color: #fff;
 }
