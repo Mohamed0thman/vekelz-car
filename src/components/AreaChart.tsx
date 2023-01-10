@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Chart as ChartJS,
@@ -28,65 +28,84 @@ ChartJS.register(
   Filler
 );
 
-export const options = {
-  responsive: true,
-  elements: {
-    point: {
-      radius: 0,
-    },
-  },
-  scales: {
-    x: {
-      border: { display: false },
-      grid: {
-        color: "#F9F9F9 ",
-        tickColor: "transparent ",
-      },
-    },
-    y: {
-      display: false,
-      grid: {
-        color: "transparent ",
-        tickColor: "transparent ",
-      },
-    },
-  },
-  plugins: {
-    legend: { display: false },
-    tooltip: { enabled: true },
-  },
-};
-
-const labels = ["7 am", "9 am", "1 pm", "3pm", "5 pm", "7 pm", "9pm"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      fill: true,
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      borderColor: "#FF764C",
-      backgroundColor: (context: ScriptableContext<"line">) => {
-        const ctx = context.chart.ctx;
-        const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-        gradient.addColorStop(0, "rgba(255, 118, 76, 0.24)");
-        gradient.addColorStop(1, "rgba(250,174,50,0)");
-        return gradient;
-      },
-      borderWidth: 1,
-      tension: 0.3,
-    },
-  ],
-};
-
 type Props = {
-  hovered: boolean;
+  primaryColor?: string;
 };
 
-const AreaChart = ({ hovered }: Props) => {
+const AreaChart = ({ primaryColor = "blue" }: Props) => {
+  const [chartData, setChartData] = useState<number[]>(getRandomData());
+
+  function handleOnDay() {
+    setChartData(getRandomData());
+  }
+
+  function getRandomData(): number[] {
+    return [1, 2, 3, 4, 5, 6, 7].map(() =>
+      faker.datatype.number({ min: 0, max: 1000 })
+    );
+  }
+
+  const options = {
+    responsive: true,
+    animations: {
+      colors: { duration: 0 },
+    },
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
+    scales: {
+      x: {
+        border: { display: false },
+        grid: {
+          tickColor: "transparent ",
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          color: "transparent ",
+          tickColor: "transparent ",
+        },
+      },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: true },
+    },
+  };
+
+  const labels = ["7 am", "9 am", "1 pm", "3pm", "5 pm", "7 pm", "9pm"];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        fill: true,
+        data: chartData,
+        borderColor: primaryColor,
+        backgroundColor: (context: ScriptableContext<"line">) => {
+          const ctx = context.chart.ctx;
+          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+          gradient.addColorStop(0, "rgba(255, 118, 76, 0.24)");
+          gradient.addColorStop(1, "rgba(250,174,50,0)");
+          return gradient;
+        },
+        borderWidth: 1,
+        tension: 0.3,
+      },
+    ],
+  };
+
   return (
     <div>
-      {/* <DateButtons /> */}
+      <DateButtons
+        handleOnDay={handleOnDay}
+        text="20 February 2022"
+        styleConataner={{ flexDirection: "row-reverse" }}
+        primaryColor={primaryColor}
+      />
       <Line options={options} data={data} />
     </div>
   );

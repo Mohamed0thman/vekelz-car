@@ -9,17 +9,28 @@ body {
   font-size: 2rem;
   font-weight: 400;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
 h1 {
   font-size: 3rem;
-  font-weight: bold;
 }
 h2 {
   font-size: 2.4rem;
-  font-weight: bold;
 }
 h3 {
   font-size: 2rem;
-  font-weight: bold;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.6rem;
 }
 
 ul {
@@ -69,6 +80,7 @@ a {
 .main {
   padding: 30px;
   background: #f5f5f5 !important;
+  min-height: 100vh;
 }
 /* components */
 
@@ -85,15 +97,38 @@ a {
   color: #fff;
 }
 
+/* chart */
+.chart-content {
+  border-radius: 14px;
+  max-width: 488px;
+  max-height: 332px;
+  min-height: 280px;
+  padding: 15px 30px;
+  background: #fff;
+}
+
 /* /////////////////////// */
 
 /* media quary */
 @media only screen and (max-width: 992px) {
+  html {
+    font-size: 58%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
   .pie-card {
     margin-bottom: 20px;
+  }
+  .chart-content {
+    margin-bottom: 30px;
+  }
+
+  .recommend-cart {
+    margin-bottom: 30px;
   }
 }
 
@@ -136,7 +171,11 @@ a {
   background-color: #292e3d;
 }
 /* // home page dark theme */
-.dark .pie-card {
+.dark .pie-card,
+.dark .chart-content {
   background-color: #242731;
   color: #fff;
+}
+.dark .date-buttons {
+  background-color: #242731;
 }

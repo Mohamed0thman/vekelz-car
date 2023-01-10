@@ -18,16 +18,16 @@ const HomePage = () => {
         </Row>
 
         <Row style={{ marginTop: "32px" }}>
-          <Col lg="6">
-            <ChartContainer title="Miles Statistics" />
+          <Col md="6">
+            <ChartContainer title="Miles" />
           </Col>
-          <Col lg="6">
-            <ChartContainer title="Car Statistics" isAreaChart={true} />
+          <Col md="6">
+            <ChartContainer title="Car" isAreaChart={true} />
           </Col>
         </Row>
         <Row style={{ marginTop: "32px" }}>
           {Data.recommendData.map((item, i) => (
-            <Col lg="4" key={i}>
+            <Col ms="6" md="4" key={i}>
               <RecommendCard recommendItem={item} index={i} />
             </Col>
           ))}

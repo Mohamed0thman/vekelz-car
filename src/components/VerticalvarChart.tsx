@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,6 +12,7 @@ import { Bar } from "react-chartjs-2";
 
 import { faker } from "@faker-js/faker";
 import { DateButtons } from ".";
+import { AppContext } from "../context/AppContext";
 
 ChartJS.register(
   CategoryScale,
@@ -23,9 +24,10 @@ ChartJS.register(
 );
 
 type Props = {
-  hovered: boolean;
+  primaryColor?: string;
 };
-const VerticalvarChart = ({ hovered }: Props) => {
+const VerticalvarChart = ({ primaryColor = "blue" }: Props) => {
+  const { darkTheme } = useContext(AppContext);
   const [chartData, setChartData] = useState<number[]>(getRandomData());
 
   function handleOnDay() {
@@ -40,7 +42,9 @@ const VerticalvarChart = ({ hovered }: Props) => {
 
   const options = {
     responsive: true,
-
+    animations: {
+      colors: { duration: 0 },
+    },
     plugins: {
       legend: { display: false },
       tooltip: { enabled: true },
@@ -73,7 +77,7 @@ const VerticalvarChart = ({ hovered }: Props) => {
     datasets: [
       {
         data: chartData,
-        backgroundColor: "#F4F5F9",
+        backgroundColor: darkTheme ? "#1F2128" : "#F4F5F9",
         barThickness: 28,
         hoverBackgroundColor: "#2884FF",
       },
@@ -84,9 +88,8 @@ const VerticalvarChart = ({ hovered }: Props) => {
     <div>
       <DateButtons
         handleOnDay={handleOnDay}
-        handleOnMonth={handleOnDay}
-        handleOnYear={handleOnDay}
         text="256 Miles"
+        primaryColor="#2884FF"
       />
       <Bar options={options} data={data} />
     </div>
