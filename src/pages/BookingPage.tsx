@@ -5,7 +5,7 @@ import BookingCard from "../components/BookingCard";
 
 const BookingPage = () => {
   return (
-    <div style={{ background: "#F5F5F5", minHeight: "100vh", padding: "30px" }}>
+    <div className="main">
       <Container>
         <h1>Booking</h1>
 

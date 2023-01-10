@@ -7,6 +7,28 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 type Props = { pieColor: string };
 
 const PieChart = ({ pieColor }: Props) => {
+  const data = {
+    datasets: [
+      {
+        label: "Poll",
+        data: [30, 30, 70],
+        backgroundColor: ["transparent", pieColor, "transparent"],
+        borderColor: ["transparent "],
+        rotation: 140,
+        borderRadius: 6,
+      },
+    ],
+  };
+
+  const options = {
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+
+    cutout: "80%",
+  };
+
   return (
     <div style={{ width: "112px", height: "112px", position: "relative" }}>
       <div
@@ -18,28 +40,7 @@ const PieChart = ({ pieColor }: Props) => {
           left: 0,
         }}
       >
-        <Doughnut
-          data={{
-            datasets: [
-              {
-                label: "Poll",
-                data: [30, 30, 70],
-                backgroundColor: ["transparent", pieColor, "transparent"],
-                borderColor: ["transparent "],
-                rotation: 140,
-                borderRadius: 6,
-              },
-            ],
-          }}
-          options={{
-            plugins: {
-              legend: { display: false },
-              tooltip: { enabled: false },
-            },
-
-            cutout: "80%",
-          }}
-        ></Doughnut>
+        <Doughnut data={data} options={options}></Doughnut>
       </div>
       <div>
         <Doughnut
@@ -55,14 +56,7 @@ const PieChart = ({ pieColor }: Props) => {
               },
             ],
           }}
-          options={{
-            plugins: {
-              legend: { display: false },
-              tooltip: { enabled: false },
-            },
-
-            cutout: "80%",
-          }}
+          options={options}
         ></Doughnut>
       </div>
     </div>

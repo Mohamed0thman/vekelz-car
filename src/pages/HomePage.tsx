@@ -7,9 +7,9 @@ import RecommendCard from "../components/RecommendCard";
 
 const HomePage = () => {
   return (
-    <div style={{ background: "#F5F5F5", minHeight: "100vh" }}>
-      <Container fluid style={{ paddingRight: "30px", paddingLeft: "30px" }}>
-        <Row style={{ paddingTop: "30px" }}>
+    <div className="main">
+      <Container fluid>
+        <Row>
           {Data.pieData.map((item, i) => (
             <Col key={i}>
               <PieCard pieItem={item} index={i} />

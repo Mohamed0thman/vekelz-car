@@ -7,7 +7,7 @@ import SideBarLink from "./SideBarLink";
 
 const SideBar = () => {
   return (
-    <Navbar sticky="top" className=" flex-column ">
+    <Navbar sticky="top" className=" flex-column vh-100 ">
       <div>
         <Logo icon={Icons.logoIcon} title="Motiv." />
         <ul style={{ padding: "0" }}>

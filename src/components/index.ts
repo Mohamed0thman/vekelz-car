@@ -6,6 +6,7 @@ import ChartContainer from "./ChartContainer";
 import AreaChart from "./AreaChart";
 import VerticalvarChart from "./VerticalvarChart";
 import Spinners from "./Spinners";
+import Layout from "./Layout";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   VerticalvarChart,
   AreaChart,
   Spinners,
+  Layout,
 };
