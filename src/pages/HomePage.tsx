@@ -8,26 +8,26 @@ import RecommendCard from "../components/RecommendCard";
 const HomePage = () => {
   return (
     <div className="main">
-      <Container fluid>
+      <Container>
         <Row>
           {Data.pieData.map((item, i) => (
-            <Col key={i}>
+            <Col sm="6" md="3" key={i}>
               <PieCard pieItem={item} index={i} />
             </Col>
           ))}
         </Row>
 
         <Row style={{ marginTop: "32px" }}>
-          <Col>
+          <Col lg="6">
             <ChartContainer Chart={<VerticalvarChart />} />
           </Col>
-          <Col>
+          <Col lg="6">
             <ChartContainer Chart={<AreaChart />} />
           </Col>
         </Row>
         <Row style={{ marginTop: "32px" }}>
           {Data.recommendData.map((item, i) => (
-            <Col key={i}>
+            <Col lg="4" key={i}>
               <RecommendCard recommendItem={item} index={i} />
             </Col>
           ))}

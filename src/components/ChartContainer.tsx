@@ -24,7 +24,7 @@ const styles = {
   milesChart: {
     background: "white",
     borderRadius: "14px",
-    width: "488px",
+    maxWidth: "488px",
     height: "332px",
     padding: "15px",
   },

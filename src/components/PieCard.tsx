@@ -20,7 +20,7 @@ const PieCard = ({ pieItem, index }: Props) => {
   return (
     <div
       style={styles.pieCard}
-      className="d-flex flex-column justify-content-around align-items-center"
+      className="pie-card d-flex flex-column justify-content-around align-items-center"
     >
       <div
         className="d-flex flex-column align-items-center"
@@ -59,7 +59,7 @@ const PieCard = ({ pieItem, index }: Props) => {
 
 const styles = {
   pieCard: {
-    width: "232px",
+    maxWidth: "232px",
     height: "266px",
     backgroundColor: "white",
     borderRadius: 14,

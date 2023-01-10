@@ -14,9 +14,6 @@ const HomePage = React.lazy(() => import("./pages/HomePage"));
 const BookingPage = React.lazy(() => import("./pages/BookingPage"));
 
 import { Route, Routes } from "react-router-dom";
-import { Row, Col } from "react-bootstrap";
-
-import "./App.css";
 
 function App() {
   return (

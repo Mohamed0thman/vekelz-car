@@ -35,7 +35,11 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
 };
 
 const styles = {
-  recommendCard: { width: "310px", padding: "15px 27px", borderRadius: "14px" },
+  recommendCard: {
+    maxWidth: "310px",
+    padding: "15px 27px",
+    borderRadius: "14px",
+  },
 };
 
 export default RecommendCard;
