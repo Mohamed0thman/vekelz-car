@@ -24,7 +24,9 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
         <img src={Icons.recycleIcon} alt="recycle" />
         <h5 style={{ margin: 0, marginLeft: "10px" }}>{ratio}% Recommend </h5>
       </div>
-      <div style={{ marginBottom: "10px", maxWidth: "260px" }}>
+      <div
+        style={{ marginBottom: "10px", maxWidth: "257px", maxHeight: "106px" }}
+      >
         <img
           style={{ width: "100%", height: "100%", objectFit: "contain" }}
           src={image}
@@ -49,7 +51,13 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
             src={Icons.targetIcon}
             alt="targetIcon"
           />
-          <img src={Icons.thunderIcon} alt="thunderIcon" />
+          <Icons.ThunderIcon
+            style={{ strokeWidth: "2px" }}
+            stroke="#72767C"
+            fill="none"
+            width={13}
+            height={13}
+          />
         </div>
         <div>${inHour}/h</div>
       </div>

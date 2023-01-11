@@ -3,21 +3,45 @@ import { Link, NavLink } from "react-router-dom";
 import { LinkType } from "../types";
 type Props = {
   link: LinkType;
+  disabled?: boolean;
 };
 
-const SideBarLink = ({ link }: Props) => {
-  const { icon, title, path } = link;
+const SideBarLink = ({ link, disabled }: Props) => {
+  const { Icon, title, path } = link;
   return (
     <li className="sidebar-navitem">
-      <NavLink
-        to={path}
-        className={({ isActive }) =>
-          `sidebar-navlink ${isActive ? "sidebar-navlink-active" : ""}`
-        }
-      >
-        <img src={icon} alt={title} />
-        <span style={{ marginLeft: "10px" }}>{title}</span>
-      </NavLink>
+      {disabled ? (
+        <Link to={path} className="sidebar-navlink">
+          <Icon />
+          <span
+            style={{
+              marginLeft: "10px",
+              fontSize: "1.4rem",
+              fontWeight: "500",
+            }}
+          >
+            {title}
+          </span>
+        </Link>
+      ) : (
+        <NavLink
+          to={path}
+          className={({ isActive }) =>
+            `sidebar-navlink ${isActive ? "sidebar-navlink-active" : ""}`
+          }
+        >
+          <Icon />
+          <span
+            style={{
+              marginLeft: "10px",
+              fontSize: "1.4rem",
+              fontWeight: "500",
+            }}
+          >
+            {title}
+          </span>
+        </NavLink>
+      )}
     </li>
   );
 };

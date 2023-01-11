@@ -41,7 +41,7 @@ const DateButtons = ({
           </li>
         ))}
       </ul>
-      <h4>{text}</h4>
+      <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>{text}</p>
     </div>
   );
 };

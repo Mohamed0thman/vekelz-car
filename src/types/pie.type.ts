@@ -1,5 +1,5 @@
 export type Pie = {
-  icon?: string;
-  ratio?: number;
-  title?: string;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  ratio: number;
+  title: string;
 };

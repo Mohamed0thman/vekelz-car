@@ -27,7 +27,7 @@ const HomePage = () => {
         </Row>
         <Row style={{ marginTop: "32px" }}>
           {Data.recommendData.map((item, i) => (
-            <Col ms="6" md="4" key={i}>
+            <Col md="4" key={i}>
               <RecommendCard recommendItem={item} index={i} />
             </Col>
           ))}

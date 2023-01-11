@@ -3,21 +3,21 @@ import Icon from "../icons";
 import Images from "../images";
 
 const links: LinkType[] = [
-  { title: "Dashboard", icon: Icon.dashboardIcon, path: "/" },
-  { title: "Assests", icon: Icon.assetsIcon, path: "/assests" },
-  { title: "Booking", icon: Icon.bookingIcon, path: "/booking" },
-  { title: "Sell Cars", icon: Icon.sellCarIcon, path: "/sell-cars" },
-  { title: "Buy Cars", icon: Icon.buyIcon, path: "/buy-cars" },
-  { title: "Services", icon: Icon.servicesIcon, path: "/services" },
-  { title: "Calender", icon: Icon.calenderIcon, path: "/calender" },
-  { title: "Messages", icon: Icon.messageIcon, path: "/messages" },
+  { title: "Dashboard", Icon: Icon.DashboardIcon, path: "/" },
+  { title: "Assests", Icon: Icon.AssetsIcon, path: "/assests" },
+  { title: "Booking", Icon: Icon.BookingIcon, path: "/booking" },
+  { title: "Sell Cars", Icon: Icon.SellCarIcon, path: "/sell-cars" },
+  { title: "Buy Cars", Icon: Icon.BuyIcon, path: "/buy-cars" },
+  { title: "Services", Icon: Icon.ServicesIcon, path: "/services" },
+  { title: "Calender", Icon: Icon.CalenderIcon, path: "/calender" },
+  { title: "Messages", Icon: Icon.MessageIcon, path: "/messages" },
 ];
 
 const pieData: PieType[] = [
-  { icon: Icon.fillThunderIcon, ratio: 45, title: "Energy" },
-  { icon: Icon.rangeIcon, ratio: 157, title: "Range" },
-  { icon: Icon.breakFluidIcon, ratio: 9, title: "Breal fluid" },
-  { icon: Icon.wheelIcon, ratio: 25, title: "Tire Wear" },
+  { Icon: Icon.ThunderIcon, ratio: 45, title: "Energy" },
+  { Icon: Icon.RangeIcon, ratio: 157, title: "Range" },
+  { Icon: Icon.BreakFluidIcon, ratio: 9, title: "Breal fluid" },
+  { Icon: Icon.WheelIcon, ratio: 25, title: "Tire Wear" },
 ];
 
 const recommendData: RecommendType[] = [

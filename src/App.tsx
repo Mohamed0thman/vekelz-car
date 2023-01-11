@@ -9,6 +9,7 @@ import {
   MessagesPage,
   SellCarsPage,
   ServicesPage,
+  SettingsPage,
 } from "./pages";
 const HomePage = React.lazy(() => import("./pages/HomePage"));
 const BookingPage = React.lazy(() => import("./pages/BookingPage"));
@@ -27,6 +28,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/calender" element={<CalenderPage />} />
         <Route path="/messages" element={<MessagesPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
       </Route>
     </Routes>
   );

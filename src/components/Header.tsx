@@ -11,7 +11,7 @@ const Header = () => {
     <Navbar
       sticky="top"
       expand="lg"
-      className={`$${darkTheme ? "dark" : ""}`}
+      className={`${darkTheme ? "dark" : ""}`}
       style={{
         background: darkTheme ? "#242731" : "#ffffff",
         borderLeft: darkTheme ? " 1px solid #1F2128" : "1px solid #F5F5F5",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PieType } from "../types";
 import PieChart from "./PieChart";
+import { ReactComponent as FillThunderIcon } from "../assets/icons/FillThunderIcon.svg";
 
 type Props = {
   pieItem: PieType;
@@ -9,7 +10,7 @@ type Props = {
 
 const PieCard = ({ pieItem, index }: Props) => {
   const [hoverd, setHoverd] = useState<boolean>(false);
-  const { title, icon, ratio } = pieItem;
+  const { title, Icon, ratio } = pieItem;
 
   const iconColors: string[] = [
     "#70CF9730",
@@ -37,7 +38,7 @@ const PieCard = ({ pieItem, index }: Props) => {
           }}
           className="d-flex justify-content-center align-items-center"
         >
-          <img style={{ color: pieColors[index] }} src={icon} alt="" />
+          <Icon fill={hoverd ? "#fff" : pieColors[index]} />
         </div>
         <h2 style={{ marginTop: "10px" }}>{title}</h2>
       </div>

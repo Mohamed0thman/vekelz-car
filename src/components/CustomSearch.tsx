@@ -4,7 +4,7 @@ import { Icons } from "../assets";
 
 const CustomSearch = () => {
   return (
-    <div className=" d-flex align-items-center" style={styles.searchGroup}>
+    <div className=" search-group d-flex align-items-center">
       <img
         src={Icons.searchIcon}
         alt="search"
@@ -19,7 +19,6 @@ const CustomSearch = () => {
         placeholder="Search or type"
         className="me-2 shadow-none"
         aria-label="Search"
-        style={styles.searchInput}
       />
     </div>
   );

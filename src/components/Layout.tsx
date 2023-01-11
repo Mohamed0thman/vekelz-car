@@ -18,7 +18,7 @@ const Layout = () => {
         <Col xs="10" className="p-0  align-items-center">
           <Header />
           <Suspense fallback={<Spinners />}>
-            <main className={`${darkTheme ? "main dark" : "main"}`}>
+            <main className={`${darkTheme ? "dark main " : "main"}`}>
               <Outlet />
             </main>
           </Suspense>

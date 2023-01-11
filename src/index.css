@@ -16,6 +16,7 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  margin: 0;
 }
 h1 {
   font-size: 3rem;
@@ -55,6 +56,11 @@ a {
 }
 
 /* side bar */
+
+.sidebar-logo {
+  width: 150px;
+  padding-left: 9px;
+}
 .sidebar-navitem {
   margin-top: 10px;
 }
@@ -107,6 +113,22 @@ a {
   background: #fff;
 }
 
+/* search  */
+.search-group {
+  background: #f5f4f6;
+  padding: 12px;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.search-group input {
+  border: none;
+  font-size: 1.6rem;
+  padding: "0px";
+  padding-left: 15px;
+  background: #f5f4f6;
+}
+
 /* /////////////////////// */
 
 /* media quary */
@@ -128,6 +150,7 @@ a {
   }
 
   .recommend-cart {
+    margin: 0 auto;
     margin-bottom: 30px;
   }
 }
@@ -148,16 +171,17 @@ a {
 /* /////////////////////////////////////////////////// */
 /* dark mode theme */
 /* /////////////////////////////////////////////////////// */
-.dark {
+.dark.main {
   background: #1f2128 !important;
+}
+.dark.main h1,
+.dark .sidebar-title {
+  color: #fff;
 }
 
 /* dark side bar */
 .sidebar.dark {
   background: #242731 !important;
-}
-.dark .sidebar-title {
-  color: #fff;
 }
 .dark .sidebar-navlink {
   color: #808191;
@@ -166,6 +190,14 @@ a {
   color: #ffffff;
   background-color: #292e3d;
 }
+.dark .sidebar-navlink-active > svg {
+  fill: #fff;
+  color: #fff;
+}
+.dark .sidebar-navlink:hover svg {
+  fill: #fff;
+}
+
 .dark .sidebar-navlink:hover {
   color: #ffffff;
   background-color: #292e3d;
@@ -178,4 +210,9 @@ a {
 }
 .dark .date-buttons {
   background-color: #242731;
+}
+.dark .search-group input,
+.dark .search-group {
+  background: #1f2128 !important;
+  color: #7c7c8d;
 }

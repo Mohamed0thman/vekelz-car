@@ -1,5 +1,7 @@
+import React from "react";
+
 export type Link = {
   title: string;
-  icon: string;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   path: string;
 };

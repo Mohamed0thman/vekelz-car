@@ -6,7 +6,7 @@ import SellCarsPage from "./SellCarsPage";
 import ServicesPage from "./ServicesPage";
 import CalenderPage from "./CalenderPage";
 import MessagesPage from "./MessagesPage";
-
+import SettingsPage from "./SettingsPage";
 export {
   BookingPage,
   HomePage,
@@ -16,4 +16,5 @@ export {
   ServicesPage,
   CalenderPage,
   MessagesPage,
+  SettingsPage,
 };
