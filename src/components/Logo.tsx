@@ -10,8 +10,8 @@ type Props = {
 
 const Logo = ({ icon, title }: Props) => {
   return (
-    <div style={styles.logo} className="d-flex  align-items-center">
-      <Link to="/" className="sidebar-logo d-flex align-items-center ">
+    <div style={styles.logo} className="">
+      <Link to="/" className="sidebar-logo d-flex align-items-center h-100">
         <img
           src={icon}
           alt={title}
@@ -19,7 +19,7 @@ const Logo = ({ icon, title }: Props) => {
             marginRight: "10px",
           }}
         />
-        <h2 className="sidebar-title">{title}</h2>
+        <h2 className="sidebar-title d-none  d-md-block">{title}</h2>
       </Link>
     </div>
   );

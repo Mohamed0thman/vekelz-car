@@ -10,21 +10,21 @@ const Layout = () => {
   const { darkTheme } = useContext(AppContext);
 
   return (
-    <>
-      <Row>
-        <Col xs="2" className="p-0">
+    <div className={`layout ${darkTheme ? "dark  " : ""} `}>
+      <Row className="layout-row">
+        <Col xs={2} className="p-0 sidebar-col">
           <SideBar />
         </Col>
-        <Col xs="10" className="p-0  align-items-center">
+        <Col xs={10} className="p-0 main-col ">
           <Header />
           <Suspense fallback={<Spinners />}>
-            <main className={`${darkTheme ? "dark main " : "main"}`}>
+            <main className={"main"}>
               <Outlet />
             </main>
           </Suspense>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

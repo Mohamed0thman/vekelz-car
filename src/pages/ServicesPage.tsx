@@ -5,7 +5,7 @@ const ServicesPage = () => {
   return (
     <>
       <Container>
-        <h1>ServicesPage</h1>
+        <h1 className="page-title">ServicesPage</h1>
       </Container>
     </>
   );

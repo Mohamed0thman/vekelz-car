@@ -1,7 +1,7 @@
 import React from "react";
-import recycleIcon from "./recycleIcon.svg";
-import repeatIcon from "./repeatIcon.svg";
-import targetIcon from "./targetIcon.svg";
+import { ReactComponent as RecycleIcon } from "./recycleIcon.svg";
+import { ReactComponent as RepeatIcon } from "./repeatIcon.svg";
+import { ReactComponent as TargetIcon } from "./targetIcon.svg";
 import searchIcon from "./searchIcon.svg";
 import { ReactComponent as DashboardIcon } from "./dashboardIcon.svg";
 import { ReactComponent as AssetsIcon } from "./assets.svg";
@@ -20,25 +20,24 @@ import { ReactComponent as LogoutIcon } from "./logoutIcon.svg";
 import notificationIcon from "./notification.svg";
 import logoIcon from "./logo.svg";
 
-import filterIcon from "./filtterIcon.svg";
+import { ReactComponent as FilterIcon } from "./filtterIcon.svg";
 import sortIcon from "./sortIcon.svg";
 import { ReactComponent as HeartIcon } from "./heartIcon.svg";
-// import heartWhiteIcon from "./heartWhiteIcon.svg";
-import userIcon from "./userIcon.svg";
+import { ReactComponent as UserIcon } from "./userIcon.svg";
 
 export default {
   SettingIcon,
   LogoutIcon,
-  userIcon,
-  filterIcon,
+  UserIcon,
+  FilterIcon,
   sortIcon,
   HeartIcon,
   notificationIcon,
   BreakFluidIcon,
   ThunderIcon,
-  recycleIcon,
-  repeatIcon,
-  targetIcon,
+  RecycleIcon,
+  RepeatIcon,
+  TargetIcon,
   searchIcon,
   DashboardIcon,
   AssetsIcon,

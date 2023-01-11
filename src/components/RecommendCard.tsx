@@ -21,7 +21,7 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
         style={{ marginBottom: "12px" }}
         className="d-flex align-items-center"
       >
-        <img src={Icons.recycleIcon} alt="recycle" />
+        <Icons.RecycleIcon />
         <h5 style={{ margin: 0, marginLeft: "10px" }}>{ratio}% Recommend </h5>
       </div>
       <div
@@ -40,17 +40,9 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
         className="d-flex d-flex justify-content-between align-items-center"
       >
         <div className="d-flex justify-content-center align-items-center">
-          <img
-            style={{ marginRight: "16px" }}
-            src={Icons.repeatIcon}
-            alt="repeatIcon"
-          />
+          <Icons.RepeatIcon style={{ marginRight: "16px" }} />
           <span style={{ marginRight: "16px" }}>{price}k</span>
-          <img
-            style={{ marginRight: "16px" }}
-            src={Icons.targetIcon}
-            alt="targetIcon"
-          />
+          <Icons.TargetIcon style={{ marginRight: "16px" }} />
           <Icons.ThunderIcon
             style={{ strokeWidth: "2px" }}
             stroke="#72767C"
@@ -71,6 +63,7 @@ const styles = {
     height: "236px",
     padding: "15px 27px",
     borderRadius: "14px",
+    border: "none",
   },
   cardHeader: {},
 

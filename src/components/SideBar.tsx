@@ -1,18 +1,13 @@
-import { useContext } from "react";
 import { Navbar } from "react-bootstrap";
-
 import { Data, Icons } from "../assets";
-import { AppContext } from "../context/AppContext";
 import Logo from "./Logo";
 import SideBarLink from "./SideBarLink";
 
 const SideBar = () => {
-  const { darkTheme } = useContext(AppContext);
-
   return (
     <Navbar
       sticky="top"
-      className={`flex-column vh-100  sidebar ${darkTheme ? "dark" : ""} `}
+      className={`flex-column vh-100  sidebar align-items-start `}
     >
       <Logo icon={Icons.logoIcon} title="Motiv." />
 

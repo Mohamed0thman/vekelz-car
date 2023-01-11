@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Icons } from "../assets";
 import { CarType } from "../types";
 
@@ -8,29 +8,34 @@ type Props = {
 
 const BookingCard = ({ carItem }: Props) => {
   const { name, image, favorite, type, price, user } = carItem;
+
+  const [love, setLove] = useState<null | boolean>(null);
+
+  useEffect(() => {
+    setLove(favorite);
+  }, []);
+
   return (
-    <div
-      style={{
-        background: "white",
-        borderRadius: 16,
-        width: "325px",
-        height: "267px",
-        marginBottom: "24px",
-        padding: "24px",
-      }}
-      className="d-flex flex-column  justify-content-between"
-    >
+    <div className="booking-card d-flex flex-column  justify-content-between">
       <div>
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="booking-card-header d-flex align-items-center justify-content-between">
           <h4>{name}</h4>
-          {favorite ? (
-            <img src={Icons.heartRedIcon} alt="heartRedIcon" />
+          {love ? (
+            <Icons.HeartIcon
+              fill="#F84F56"
+              onClick={() => setLove(false)}
+              style={{ cursor: "pointer" }}
+            />
           ) : (
-            <img src={Icons.heartWhiteIcon} alt="heartWhiteIcon" />
+            <Icons.HeartIcon
+              fill="none"
+              stroke="#A4A5A6"
+              onClick={() => setLove(true)}
+            />
           )}
         </div>
 
-        <div>Coupe</div>
+        <div style={{ color: "#72767C", fontSize: "1.6rem" }}>Coupe</div>
       </div>
       <div
         style={{ width: "230px", height: "100px" }}
@@ -47,25 +52,26 @@ const BookingCard = ({ carItem }: Props) => {
           alt={name}
         />
       </div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="booking-card-footer d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center ">
-          <div>
-            <img src={Icons.userIcon} alt="userIcon" />
-            <span>{user}</span>
+          <div
+            style={{ marginRight: "18px" }}
+            className="d-flex  align-items-center "
+          >
+            <Icons.UserIcon fill="#72767C" />
+            <span style={{ marginLeft: "4px" }}>{user}</span>
           </div>
-          <div>
-            <img src={Icons.recycleIcon} alt="recycleIcon" />
-            <span>{type}</span>
+          <div className="d-flex  align-items-center ">
+            <Icons.RepeatIcon fill="#72767C" />
+            <span style={{ marginLeft: "4px" }}>{type}</span>
           </div>
         </div>
-        <div>${price}/d</div>
+        <h4 className="price">
+          ${price} <span style={{ fontWeight: "400" }}>/d</span>{" "}
+        </h4>
       </div>
     </div>
   );
-};
-
-const styles = {
-  bookingCard: {},
 };
 
 export default BookingCard;

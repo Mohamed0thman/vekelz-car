@@ -5,7 +5,7 @@ const MessagesPage = () => {
   return (
     <>
       <Container>
-        <h1>MessagesPage</h1>
+        <h1 className="page-title">MessagesPage</h1>
       </Container>
     </>
   );

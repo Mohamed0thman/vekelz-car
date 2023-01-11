@@ -5,7 +5,7 @@ const SettingsPage = () => {
   return (
     <>
       <Container>
-        <h1>SettingsPage</h1>
+        <h1 className="page-title">SettingsPage</h1>
       </Container>
     </>
   );

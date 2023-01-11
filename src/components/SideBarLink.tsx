@@ -14,6 +14,7 @@ const SideBarLink = ({ link, disabled }: Props) => {
         <Link to={path} className="sidebar-navlink">
           <Icon />
           <span
+            className="d-none d-md-inline "
             style={{
               marginLeft: "10px",
               fontSize: "1.4rem",
@@ -32,6 +33,7 @@ const SideBarLink = ({ link, disabled }: Props) => {
         >
           <Icon />
           <span
+            className="d-none  d-md-inline"
             style={{
               marginLeft: "10px",
               fontSize: "1.4rem",
