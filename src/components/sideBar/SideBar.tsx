@@ -9,7 +9,7 @@ const SideBar = () => {
   return (
     <Navbar
       sticky="top"
-      className={`sidebar d-lg-table-cell  flex-column vh-100  sidebar align-items-sm-center align-items-md-start `}
+      className={`sidebar d-flex  flex-column vh-100  sidebar align-items-sm-center align-items-md-start `}
     >
       <Logo icon={Icons.logoIcon} title="Motiv." />
 
@@ -27,7 +27,11 @@ const SideBar = () => {
           }}
         />
         <SideBarLink
-          link={{ path: "#disable", title: "Log out", Icon: Icons.LogoutIcon }}
+          link={{
+            path: "#disable",
+            title: "Log out",
+            Icon: Icons.LogoutIcon,
+          }}
           disabled={true}
         />
       </ul>

@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./header/Header";
 import Logo from "./Logo";
 import SideBar from "./sideBar/SideBar";
 import CustomSearch from "./CustomSearch";

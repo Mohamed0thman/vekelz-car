@@ -57,21 +57,6 @@ a:hover {
   padding: 30px;
   min-height: 100vh;
 }
-.dropdown-toggle::after {
-  display: none;
-}
-.dropdown-menu[data-bs-popper] {
-  right: 0 !important;
-  left: auto;
-  position: absolute !important;
-}
-
-.header-content {
-  padding: 0 30px;
-}
-.header-content .notificationIcon {
-  margin-right: 40px;
-}
 
 /* components */
 
@@ -178,9 +163,6 @@ a:hover {
     width: 90% !important;
   }
 
-  .header-content {
-    padding: 0 15px;
-  }
   .pie-card {
     margin-bottom: 20px;
   }
@@ -195,11 +177,11 @@ a:hover {
 }
 
 @media only screen and (max-width: 576px) {
-  .home-content {
+  /* .home-content {
     display: flex;
     align-items: center;
     flex-direction: column;
-  }
+  } */
   .header-content .notificationIcon {
     margin-right: 10px;
   }

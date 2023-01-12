@@ -1,8 +1,17 @@
 import { useContext, useState } from "react";
-import { Navbar, Container, Nav, Form } from "react-bootstrap";
-import { CustomSwitch, CustomSearch, HeaderDropdown } from ".";
-import { Images, Icons } from "../assets";
-import { AppContext } from "../context/AppContext";
+import {
+  Navbar,
+  Container,
+  Nav,
+  Form,
+  Button,
+  NavDropdown,
+} from "react-bootstrap";
+import { CustomSwitch, CustomSearch, HeaderDropdown } from "..";
+import { Images, Icons } from "../../assets";
+import { AppContext } from "../../context/AppContext";
+
+import "./header.css";
 
 const Header = () => {
   const { darkTheme, toggleTheme } = useContext(AppContext);
@@ -11,13 +20,9 @@ const Header = () => {
     <Navbar
       sticky="top"
       expand="lg"
-      style={{
-        background: darkTheme ? "#242731" : "#ffffff",
-        borderLeft: darkTheme ? " 1px solid #1F2128" : "1px solid #F5F5F5",
-        height: "78px",
-      }}
+      className={`header ${darkTheme ? "dark" : ""}`}
     >
-      <Container fluid>
+      <Container fluid >
         <Navbar.Collapse className="header-content  d-flex align-items-center justify-content-between ">
           <Form className="d-flex">
             <CustomSearch />
