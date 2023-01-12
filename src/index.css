@@ -61,7 +61,6 @@ a:hover {
 
 /* pie card */
 .pie-card {
-  /* max-width: 232px; */
   height: 266px;
   background-color: #fff;
   border-radius: 14px;
@@ -75,8 +74,7 @@ a:hover {
 /* chart */
 .chart-content {
   border-radius: 14px;
-  /* max-width: 488px; */
-  /* max-height: 332px; */
+
   min-height: 280px;
   padding: 15px 30px;
   background: #fff;
@@ -101,9 +99,7 @@ a:hover {
 .booking-card {
   background: white;
   border-radius: 16;
-  /* // max-width: 325px; */
   height: 267px;
-  /* margin-bottom: 24px; */
   padding: 24px;
 }
 .booking-card-footer {
@@ -152,32 +148,15 @@ a:hover {
 
 /* media quary */
 @media only screen and (max-width: 992px) {
-  /* .pie-card {
-    margin-bottom: 20px;
-  } */
 }
 
 @media only screen and (max-width: 768px) {
-  /* .main {
-    padding: 30px 0;
-  } */
-
   .chart-content {
     margin-bottom: 30px;
   }
-
-  /* .recommend-cart {
-    margin: 0 auto;
-    margin-bottom: 30px;
-  } */
 }
 
 @media only screen and (max-width: 576px) {
-  /* .home-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  } */
   .main {
     padding: 30px 15px;
   }
@@ -187,19 +166,16 @@ a:hover {
   .layout-right {
     width: 85vw !important;
   }
-
-  /* .booking-card {
-    margin: 0 auto;
-    margin-bottom: 20px;
-  } */
 }
 @media only screen and (max-width: 480px) {
 }
 
 @media only screen and (max-width: 365px) {
+  .layout-right {
+    width: 80vw !important;
+  }
 }
-@media only screen and (min-width: 1500px) {
-}
+
 /* /////////////////////////////////////////////////// */
 /* dark mode theme */
 /* /////////////////////////////////////////////////////// */
