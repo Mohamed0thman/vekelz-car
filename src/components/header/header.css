@@ -37,4 +37,7 @@
   .header-content .notificationIcon {
     margin-right: 10px;
   }
+  .header-content {
+    padding: 0 15px;
+  }
 }
