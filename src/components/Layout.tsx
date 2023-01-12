@@ -10,12 +10,11 @@ const Layout = () => {
   const { darkTheme } = useContext(AppContext);
 
   return (
-    <div className={`layout d-flex d-lg-table   ${darkTheme ? "dark  " : ""} `}>
-      <div className=" d-table-cell p-0">
+    <div className={`layout d-flex h-100 ${darkTheme ? "dark  " : ""} `}>
+      <div className="p-0">
         <SideBar />
       </div>
-
-      <div className="layout-right d-lg-table-cell vw-100 p-0">
+      <div className="layout-right vw-100 p-0">
         <Header />
         <Suspense fallback={<Spinners />}>
           <main className="main ">

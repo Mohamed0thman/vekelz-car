@@ -22,7 +22,7 @@ const Header = () => {
       expand="lg"
       className={`header ${darkTheme ? "dark" : ""}`}
     >
-      <Container fluid >
+      <Container  >
         <Navbar.Collapse className="header-content  d-flex align-items-center justify-content-between ">
           <Form className="d-flex">
             <CustomSearch />
