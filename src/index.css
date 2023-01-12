@@ -191,7 +191,7 @@ a:hover {
 /* dark side bar */
 .dark .sidebar,
 .dark .date-buttons {
-  background: #242731 !important;
+  background: #242731 ;
 }
 .dark .sidebar-navlink {
   color: #808191;

@@ -4,14 +4,18 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-type Props = { pieColor: string; hoverd: boolean };
+type Props = { pieColor: string; hoverd: boolean; ratio: number };
 
-const PieChart = ({ pieColor, hoverd }: Props) => {
+const PieChart = ({ pieColor, hoverd, ratio }: Props) => {
+  // function percentage(partialValue: number, totalValue: number) {
+  //   return (100 * partialValue) / totalValue;
+  // }
+  // percentage(ratio, totalRatio);
   const data = {
     datasets: [
       {
         label: "Poll",
-        data: [30, 30, 70],
+        data: [30, ratio, ratio - 100],
         backgroundColor: [
           "transparent",
           hoverd ? "#fff" : pieColor,
@@ -55,7 +59,7 @@ const PieChart = ({ pieColor, hoverd }: Props) => {
             datasets: [
               {
                 label: "Poll",
-                data: [30, 70],
+                data: [30, ratio - 100],
                 backgroundColor: [
                   "transparent",
                   hoverd ? "#B37EFC" : "#F4F5F9",

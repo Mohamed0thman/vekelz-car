@@ -44,7 +44,7 @@ const PieCard = ({ pieItem, index }: Props) => {
       </div>
 
       <div style={{ position: "relative" }}>
-        <PieChart hoverd={hoverd} pieColor={pieColors[index]} />
+        <PieChart hoverd={hoverd} pieColor={pieColors[index]} ratio={ratio} />
         <h2
           style={{
             position: "absolute",
