@@ -1,5 +1,5 @@
-import { Link as LinkType } from "./Link.types";
-import { Pie as PieType } from "./Pie.type";
-import { Recommend as RecommendType } from "./recommend.types";
-import { Car as CarType } from "./cars.types";
+import { Link as LinkType } from "./linkTypes";
+import { Pie as PieType } from "./pieType";
+import { Recommend as RecommendType } from "./recommendTypes";
+import { Car as CarType } from "./carsTypes";
 export type { LinkType, PieType, RecommendType, CarType };
