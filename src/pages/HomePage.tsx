@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <>
       <Container>
-        <Row className="gx-5">
+        <Row className="g-5">
           {Data.pieData.map((item, i) => (
             <Col sm="6" lg="3" key={i}>
               <PieCard pieItem={item} index={i} />
@@ -17,7 +17,7 @@ const HomePage = () => {
           ))}
         </Row>
 
-        <Row style={{ marginTop: "32px" }} className=" gx-5">
+        <Row style={{ marginTop: "32px" }} className=" g-5">
           <Col md="6">
             <ChartContainer title="Miles" />
           </Col>
@@ -25,7 +25,7 @@ const HomePage = () => {
             <ChartContainer title="Car" isAreaChart={true} />
           </Col>
         </Row>
-        <Row style={{ marginTop: "32px" }}>
+        <Row style={{ marginTop: "32px" }} className=" g-5">
           {Data.recommendData.map((item, i) => (
             <Col md="4" key={i}>
               <RecommendCard recommendItem={item} index={i} />

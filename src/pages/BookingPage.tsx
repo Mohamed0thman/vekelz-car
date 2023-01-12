@@ -13,7 +13,10 @@ const BookingPage = () => {
           Booking
         </h1>
 
-        <Row sm={6} className=" align-items-center justify-content-between">
+        <Row
+          sm={6}
+          className=" align-items-center justify-content-between  g-3"
+        >
           <Col className="d-flex align-items-center">
             <CustomDropdown
               select="filter"
@@ -35,7 +38,7 @@ const BookingPage = () => {
           </Col>
         </Row>
 
-        <Row style={{ marginTop: "30px" }} className=" gx-5">
+        <Row style={{ marginTop: "30px" }} className=" g-5">
           {Data.carData.map((item, i) => (
             <Col sm={6} lg={4} key={i}>
               <BookingCard carItem={item} />

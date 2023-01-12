@@ -104,7 +104,7 @@ a:hover {
   border-radius: 16;
   /* // max-width: 325px; */
   height: 267px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   padding: 24px;
 }
 .booking-card-footer {
@@ -153,6 +153,9 @@ a:hover {
 
 /* media quary */
 @media only screen and (max-width: 992px) {
+  /* .pie-card {
+    margin-bottom: 20px;
+  } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -163,17 +166,14 @@ a:hover {
     width: 90% !important;
   }
 
-  .pie-card {
-    margin-bottom: 20px;
-  }
   .chart-content {
     margin-bottom: 30px;
   }
 
-  .recommend-cart {
+  /* .recommend-cart {
     margin: 0 auto;
     margin-bottom: 30px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 576px) {
@@ -186,10 +186,10 @@ a:hover {
     margin-right: 10px;
   }
 
-  .booking-card {
+  /* .booking-card {
     margin: 0 auto;
     margin-bottom: 20px;
-  }
+  } */
 }
 @media only screen and (max-width: 480px) {
 }
