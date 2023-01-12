@@ -22,7 +22,7 @@ const DateButtons = ({
     >
       <ul className="d-flex align-items-center">
         {buttons.map((item, i) => (
-          <li>
+          <li key={i}>
             <button
               onClick={(e) => {
                 setTarget(e.currentTarget.name);

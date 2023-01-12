@@ -8,7 +8,7 @@ import RecommendCard from "../components/RecommendCard";
 const HomePage = () => {
   return (
     <>
-      <Container>
+      <Container fluid="md">
         <Row className="g-5">
           {Data.pieData.map((item, i) => (
             <Col sm="6" lg="3" key={i}>

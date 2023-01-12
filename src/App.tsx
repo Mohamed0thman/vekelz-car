@@ -18,6 +18,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
+    <ErrorBoundary>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
@@ -31,6 +32,7 @@ function App() {
           <Route path="/settings" element={<SettingsPage />} />
         </Route>
       </Routes>
+    </ErrorBoundary>
   );
 }
 

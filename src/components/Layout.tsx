@@ -2,6 +2,7 @@ import React, { Suspense, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import ErrorBoundary from "./ErrorBoundary";
 import Header from "./header/Header";
 import SideBar from "./sideBar/SideBar";
 import Spinners from "./Spinners";
