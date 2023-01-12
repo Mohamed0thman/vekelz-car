@@ -18,7 +18,7 @@ const Layout = () => {
         <Col xs={10} className="p-0 main-col ">
           <Header />
           <Suspense fallback={<Spinners />}>
-            <main className={"main"}>
+            <main className="main">
               <Outlet />
             </main>
           </Suspense>

@@ -10,8 +10,11 @@ type Props = {
 
 const Logo = ({ icon, title }: Props) => {
   return (
-    <div style={styles.logo} className="">
-      <Link to="/" className="sidebar-logo d-flex align-items-center h-100">
+    <div className="sidebar-logo">
+      <Link
+        to="/"
+        className="sidebar-logo-link d-flex align-items-center h-100"
+      >
         <img
           src={icon}
           alt={title}
@@ -23,12 +26,6 @@ const Logo = ({ icon, title }: Props) => {
       </Link>
     </div>
   );
-};
-
-const styles = {
-  logo: {
-    height: "78px",
-  },
 };
 
 export default Logo;

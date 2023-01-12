@@ -25,14 +25,8 @@ const Header = () => {
           <Nav className=" d-flex flex-row align-items-center">
             <CustomSwitch handleOnSwitch={() => toggleTheme()} />
             <HeaderDropdown
-              styleContainer={{ marginRight: "40px" }}
-              icon={
-                <img
-                  className="thumbnail-image"
-                  src={Icons.notificationIcon}
-                  alt="notificationIcon"
-                />
-              }
+              classContainer="notificationIcon"
+              icon={<img src={Icons.notificationIcon} alt="notificationIcon" />}
               items={["Action", "   Another action"]}
             />
             <HeaderDropdown

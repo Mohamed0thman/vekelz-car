@@ -12,7 +12,7 @@ const SideBarLink = ({ link, disabled }: Props) => {
     <li className="sidebar-navitem">
       {disabled ? (
         <Link to={path} className="sidebar-navlink">
-          <Icon />
+          <Icon width={20} height={20} />
           <span
             className="d-none d-md-inline "
             style={{

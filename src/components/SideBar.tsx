@@ -7,16 +7,16 @@ const SideBar = () => {
   return (
     <Navbar
       sticky="top"
-      className={`flex-column vh-100  sidebar align-items-start `}
+      className={`flex-column vh-100  sidebar align-items-sm-center align-items-md-start `}
     >
       <Logo icon={Icons.logoIcon} title="Motiv." />
 
-      <ul>
+      <ul className="sidebar-list">
         {Data.links.map((item, i) => (
           <SideBarLink link={item} key={i} />
         ))}
       </ul>
-      <ul style={{ marginTop: "auto" }}>
+      <ul style={{ marginTop: "auto" }} className="sidebar-list">
         <SideBarLink
           link={{
             path: "/settings",

@@ -5,14 +5,21 @@ type Props = {
   items?: string[];
   icon?: JSX.Element;
   styleContainer?: React.CSSProperties;
+  classContainer?: string;
 };
 
-const HeaderDropdown = ({ items, icon, styleContainer }: Props) => {
+const HeaderDropdown = ({
+  items,
+  icon,
+  styleContainer,
+  classContainer,
+}: Props) => {
   return (
     <NavDropdown
       style={{ ...styleContainer }}
       title={<div>{icon}</div>}
       id="navbarScrollingDropdown"
+      className={`${classContainer}`}
     >
       {items?.length
         ? items.map((item, i) => (
