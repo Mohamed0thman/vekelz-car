@@ -250,7 +250,7 @@ a:hover {
 @media only screen and (max-width: 365px) {
 }
 @media only screen and (min-width: 1600px) {
-  .layout-row {
+  /* .layout-row {
     flex-wrap: nowrap;
   }
   .sidebar-col {
@@ -258,7 +258,7 @@ a:hover {
   }
   .main-col {
     width: 100%;
-  }
+  } */
 }
 /* /////////////////////////////////////////////////// */
 /* dark mode theme */
