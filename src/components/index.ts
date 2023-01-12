@@ -13,7 +13,10 @@ import DateButtons from "./DateButtons";
 import CustomDropdown from "./CustomDropdown";
 import BookingCard from "./BookingCard";
 import IconButton from "./IconButton";
+import ErrorBoundary from "./ErrorBoundary";
+
 export {
+  ErrorBoundary,
   Header,
   IconButton,
   Logo,

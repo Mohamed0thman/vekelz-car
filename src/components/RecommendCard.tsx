@@ -37,10 +37,10 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
       <h3>{name}</h3>
       <div
         style={styles.cardFooter}
-        className="d-flex d-flex justify-content-between align-items-center"
+        className=" d-flex justify-content-between align-items-center"
       >
         <div className="d-flex justify-content-center align-items-center">
-          <Icons.RepeatIcon style={{ marginRight: "16px" }} />
+          <Icons.RepeatIcon  fill="#72767C" style={{ marginRight: "16px" }} />
           <span style={{ marginRight: "16px" }}>{price}k</span>
           <Icons.TargetIcon style={{ marginRight: "16px" }} />
           <Icons.ThunderIcon
@@ -59,7 +59,7 @@ const RecommendCard = ({ recommendItem, index }: Props) => {
 
 const styles = {
   recommendCard: {
-    maxWidth: "310px",
+    // maxWidth: "310px",
     height: "236px",
     padding: "15px 27px",
     borderRadius: "14px",

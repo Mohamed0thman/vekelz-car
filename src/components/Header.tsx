@@ -14,13 +14,11 @@ const Header = () => {
       style={{
         background: darkTheme ? "#242731" : "#ffffff",
         borderLeft: darkTheme ? " 1px solid #1F2128" : "1px solid #F5F5F5",
+        height: "78px",
       }}
     >
       <Container fluid>
-        <Navbar.Collapse
-          className="d-flex  align-items-center justify-content-between "
-          style={{ padding: "0 30px" }}
-        >
+        <Navbar.Collapse className="header-content  d-flex align-items-center justify-content-between ">
           <Form className="d-flex">
             <CustomSearch />
           </Form>

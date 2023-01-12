@@ -42,7 +42,9 @@ a {
   color: black;
   text-decoration: none;
 }
-
+a:hover {
+  color: black;
+}
 .dropdown-toggle::after {
   display: none;
 }
@@ -50,12 +52,18 @@ a {
   right: 0 !important;
   left: auto;
 }
+
+.header-content {
+  padding: 0 30px;
+}
+
+/* side bar */
+
 .navbar {
   height: 78px;
   padding: 0;
 }
 
-/* side bar */
 .sidebar {
   max-width: 248px;
   background-color: white;
@@ -98,7 +106,7 @@ a {
 
 /* pie card */
 .pie-card {
-  max-width: 232px;
+  /* max-width: 232px; */
   height: 266px;
   background-color: #fff;
   border-radius: 14px;
@@ -112,8 +120,8 @@ a {
 /* chart */
 .chart-content {
   border-radius: 14px;
-  max-width: 488px;
-  max-height: 332px;
+  /* max-width: 488px; */
+  /* max-height: 332px; */
   min-height: 280px;
   padding: 15px 30px;
   background: #fff;
@@ -138,7 +146,7 @@ a {
 .booking-card {
   background: white;
   border-radius: 16;
-  max-width: 325px;
+  /* // max-width: 325px; */
   height: 267px;
   margin-bottom: 24px;
   padding: 24px;
@@ -168,6 +176,23 @@ a {
   background-size: 20px;
   background-repeat: no-repeat;
 }
+
+/*  */
+
+.icon-button {
+  background-color: #fff;
+  cursor: pointer;
+}
+.icon-button:hover {
+  background-color: #a162f7 !important;
+}
+.icon-button svg {
+  fill: #777e90;
+}
+
+.icon-button:hover svg {
+  fill: #fff;
+}
 /* /////////////////////// */
 
 /* media quary */
@@ -186,6 +211,9 @@ a {
   }
   .sidebar {
     max-width: 200px;
+    padding: 0 15px;
+  }
+  .header-content {
     padding: 0 15px;
   }
   .pie-card {
@@ -260,7 +288,8 @@ a {
   fill: #fff;
   color: #fff;
 }
-.dark .sidebar-navlink:hover svg {
+.dark .sidebar-navlink:hover svg,
+.dark .icon-button svg {
   fill: #fff;
 }
 
@@ -273,13 +302,13 @@ a {
 .dark .chart-content,
 .dark .booking-card,
 .dark .booking-card-footer,
-.dark .booking-card-footer .price {
+.dark .booking-card-footer .price,
+.dark .icon-button,
+.dark .custom-dropdown {
   background-color: #242731;
   color: #fff;
 }
-/* .dark .date-buttons {
-  background-color: #242731;
-} */
+
 .dark .search-group input,
 .dark .search-group {
   background: #1f2128 !important;

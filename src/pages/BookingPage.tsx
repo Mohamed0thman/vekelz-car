@@ -9,10 +9,12 @@ const BookingPage = () => {
   return (
     <>
       <Container>
-        <h1 className="page-title">Booking</h1>
+        <h1 className="page-title" style={{ marginBottom: "30px" }}>
+          Booking
+        </h1>
 
-        <Row className=" align-items-center ">
-          <Col className="d-flex">
+        <Row sm={6} className=" align-items-center justify-content-between">
+          <Col className="d-flex align-items-center">
             <CustomDropdown
               select="filter"
               items={filters}
@@ -21,7 +23,10 @@ const BookingPage = () => {
             <CustomDropdown select="type" items={types} />
           </Col>
 
-          <Col className="d-flex  align-items-center justify-content-sm-end">
+          <Col
+            sm={6}
+            className="d-flex  align-items-center justify-content-sm-end"
+          >
             <IconButton icon={<Icons.DashboardIcon />} />
             <IconButton
               styleContainer={{ marginLeft: "16px" }}
@@ -30,7 +35,7 @@ const BookingPage = () => {
           </Col>
         </Row>
 
-        <Row style={{ marginTop: "30px" }}>
+        <Row style={{ marginTop: "30px" }} className=" gx-5">
           {Data.carData.map((item, i) => (
             <Col sm={6} lg={4} key={i}>
               <BookingCard carItem={item} />

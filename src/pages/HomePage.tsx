@@ -9,15 +9,15 @@ const HomePage = () => {
   return (
     <>
       <Container>
-        <Row>
+        <Row className="gx-5">
           {Data.pieData.map((item, i) => (
-            <Col xs="6" md="3" key={i}>
+            <Col  sm="6" md="3" key={i}>
               <PieCard pieItem={item} index={i} />
             </Col>
           ))}
         </Row>
 
-        <Row style={{ marginTop: "32px" }}>
+        <Row style={{ marginTop: "32px" }} className=" gx-5">
           <Col md="6">
             <ChartContainer title="Miles" />
           </Col>
