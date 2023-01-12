@@ -279,16 +279,16 @@ a:hover {
 
 @media only screen and (max-width: 365px) {
 }
-@media only screen and (min-width: 1600px) {
-  /* .layout-row {
+@media only screen and (min-width: 1500px) {
+  .layout-row {
     flex-wrap: nowrap;
   }
   .sidebar-col {
-    width: auto;
+    width: 240px;
   }
   .main-col {
-    width: 100%;
-  } */
+    width: auto;
+  }
 }
 /* /////////////////////////////////////////////////// */
 /* dark mode theme */
