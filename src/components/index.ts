@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Logo from "./Logo";
-import SideBar from "./SideBar";
+import SideBar from "./sideBar/SideBar";
 import CustomSearch from "./CustomSearch";
 import ChartContainer from "./ChartContainer";
 import AreaChart from "./AreaChart";

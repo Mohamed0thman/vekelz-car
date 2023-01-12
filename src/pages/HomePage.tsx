@@ -11,7 +11,7 @@ const HomePage = () => {
       <Container>
         <Row className="gx-5">
           {Data.pieData.map((item, i) => (
-            <Col  sm="6" md="3" key={i}>
+            <Col sm="6" lg="3" key={i}>
               <PieCard pieItem={item} index={i} />
             </Col>
           ))}

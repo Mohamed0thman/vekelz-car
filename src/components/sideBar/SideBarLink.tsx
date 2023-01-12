@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { LinkType } from "../types";
+import { LinkType } from "../../types";
 type Props = {
   link: LinkType;
   disabled?: boolean;

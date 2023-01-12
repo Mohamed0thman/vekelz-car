@@ -1,22 +1,24 @@
 import { Navbar } from "react-bootstrap";
-import { Data, Icons } from "../assets";
-import Logo from "./Logo";
+import { Data, Icons } from "../../assets";
+import Logo from "../Logo";
 import SideBarLink from "./SideBarLink";
+
+import "./sideBar.css";
 
 const SideBar = () => {
   return (
     <Navbar
       sticky="top"
-      className={`flex-column vh-100  sidebar align-items-sm-center align-items-md-start `}
+      className={`sidebar d-lg-table-cell  flex-column vh-100  sidebar align-items-sm-center align-items-md-start `}
     >
       <Logo icon={Icons.logoIcon} title="Motiv." />
 
-      <ul className="sidebar-list">
+      <ul className="sidebar-navList">
         {Data.links.map((item, i) => (
           <SideBarLink link={item} key={i} />
         ))}
       </ul>
-      <ul style={{ marginTop: "auto" }} className="sidebar-list">
+      <ul style={{ marginTop: "auto" }} className="sidebar-navList">
         <SideBarLink
           link={{
             path: "/settings",

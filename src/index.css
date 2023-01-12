@@ -63,6 +63,7 @@ a:hover {
 .dropdown-menu[data-bs-popper] {
   right: 0 !important;
   left: auto;
+  position: absolute !important;
 }
 
 .header-content {
@@ -70,51 +71,6 @@ a:hover {
 }
 .header-content .notificationIcon {
   margin-right: 40px;
-}
-/* side bar */
-
-.navbar {
-  height: 78px;
-  padding: 0;
-}
-
-.sidebar {
-  max-width: 248px;
-  background-color: white;
-}
-.sidebar-logo {
-  width: 100%;
-  height: 78px;
-}
-.sidebar-logo-link {
-  width: 85%;
-  padding-left: 24px;
-}
-.sidebar-list {
-  width: 100%;
-}
-.sidebar-navitem {
-  margin-top: 10px;
-  width: 85%;
-  padding-left: 24px;
-}
-.sidebar-navlink {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #5f6165;
-  border-radius: 6px;
-
-  display: flex;
-  align-items: center;
-  padding: 8px;
-}
-.sidebar-navlink:hover {
-  background-color: #f3f5f8;
-  color: #5f6165;
-}
-.sidebar-navlink-active {
-  background-color: #f3f5f8;
 }
 
 /* components */
@@ -212,32 +168,14 @@ a:hover {
 
 /* media quary */
 @media only screen and (max-width: 992px) {
-  .sidebar-list,
-  .sidebar-logo {
-    width: auto;
-  }
-  .sidebar-navitem,
-  .sidebar-logo-link {
-    width: auto;
-    padding-left: 15px;
-  }
 }
 
 @media only screen and (max-width: 768px) {
   .main {
-    padding: 30px 15px 30px 10px;
+    padding: 30px 0;
   }
-  .sidebar-navitem,
-  .sidebar-logo-link {
-    padding: 0;
-  }
-  .sidebar-navitem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sidebar-logo-link img {
-    margin: 0 !important;
+  .layout-right {
+    width: 90% !important;
   }
 
   .header-content {
@@ -265,10 +203,7 @@ a:hover {
   .header-content .notificationIcon {
     margin-right: 10px;
   }
-  .sidebar {
-    width: auto;
-    padding: 0 5px;
-  }
+
   .booking-card {
     margin: 0 auto;
     margin-bottom: 20px;
@@ -280,15 +215,6 @@ a:hover {
 @media only screen and (max-width: 365px) {
 }
 @media only screen and (min-width: 1500px) {
-  .layout-row {
-    flex-wrap: nowrap;
-  }
-  .sidebar-col {
-    width: 240px;
-  }
-  .main-col {
-    width: auto;
-  }
 }
 /* /////////////////////////////////////////////////// */
 /* dark mode theme */
