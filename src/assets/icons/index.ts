@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactComponent as RecycleIcon } from "./recycleIcon.svg";
 import { ReactComponent as RepeatIcon } from "./repeatIcon.svg";
 import { ReactComponent as TargetIcon } from "./targetIcon.svg";
@@ -14,7 +13,7 @@ import { ReactComponent as CalenderIcon } from "./calender.svg";
 import { ReactComponent as SellCarIcon } from "./sellIcon.svg";
 import { ReactComponent as ServicesIcon } from "./services.svg";
 import { ReactComponent as ThunderIcon } from "./thunderIcon.svg";
-import { ReactComponent as BreakFluidIcon } from "./BreakFluidIcon.svg";
+import { ReactComponent as BreakIcon } from "./break.svg";
 import { ReactComponent as SettingIcon } from "./settingIcon.svg";
 import { ReactComponent as LogoutIcon } from "./logoutIcon.svg";
 import notificationIcon from "./notification.svg";
@@ -33,7 +32,7 @@ export default {
   sortIcon,
   HeartIcon,
   notificationIcon,
-  BreakFluidIcon,
+  BreakIcon,
   ThunderIcon,
   RecycleIcon,
   RepeatIcon,
